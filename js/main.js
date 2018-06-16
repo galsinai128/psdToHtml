@@ -50,3 +50,22 @@ function displayMenu(elMenu, menuTxt) {
     }
 
 }
+
+
+function displayModal(){
+    var elModalback = document.querySelector('.modal-background');
+    elModalback.style.display = 'block';
+
+    var elModal = document.querySelector('.modal');
+    elModal.style.display = 'flex';
+    
+}
+
+function closeModal(){
+    var elModalback = document.querySelector('.modal-background');
+    elModalback.style.display = 'none';
+
+    var elModal = document.querySelector('.modal');
+    elModal.style.display = 'none';
+    
+}

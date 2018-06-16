@@ -7,63 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/main.css" rel="stylesheet">
     <title>psdToHtml</title>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" 
-    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" 
-    crossorigin="anonymous"></script> <!-- fontawesome -->
-    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+
 </head>
 
+
 <body>
+    <div class="modal-background">
+        <div class="modal flex flex-dir-col space-around align-items-center">
+            <h1 class="modal-text">Join us to get access to the latest stories!</h1>
+            <input class="modal-input" type="text" placeholder="example123@bmail.com">
+            <div class="modal-btns-container">
+                <button class="modal-btn modal-btn-submit">SUBMIT</button>
+                <button class="modal-btn modal-btn-close" onclick="closeModal()">CLOSE</button>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="header-container flex space-between align-items-center">
-            <div class="logo">Blogin<span class="logo-dot">.</div></h1>
-                <nav>
-                    <ul class="nav-list clean-list flex space-between">
-                        <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Journal</li>
-                        <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">About</li>
-                        <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Work</li>
-                        <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Contact</li>
-                    </ul>
-                </nav>
-                <button class="burger"onclick="displayMenu(this,this.innerText)">☰</button>
+            <div class="logo">Blogin
+                <span class="logo-dot">.</div>
+            </h1>
+            <nav>
+                <ul class="nav-list clean-list flex space-between">
+                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Journal</li>
+                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">About</li>
+                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Work</li>
+                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Contact</li>
+                </ul>
+            </nav>
+            <button class="burger" onclick="displayMenu(this,this.innerText)">☰</button>
         </div>
     </header>
     <main class="container">
-        <ul class="items-list clean-list flex flex-wrap">
-            <li class = "item-container flex space-around">
+
+        <ul class="items-list clean-list flex flex-wrap space-around">
+            <li class="item-container flex space-around">
                 <img src="img/england.png" alt="">
                 <div class="item-info flex flex-dir-col space-between">
                     <h2 class="item-title">Duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="item-data">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
                         sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                    <div class="continue-reading-btn flex justify-content-center align-items-center" 
-                    onmouseover="continueReadHovered(this)" onmouseout="continueReadHoveredOff(this)">
-                    continue reading</div>
+                    <div class="continue-reading-btn flex justify-content-center align-items-center" onmouseover="continueReadHovered(this)"
+                        onmouseout="continueReadHoveredOff(this)" onclick="displayModal()"> continue reading</div>
                 </div>
             </li>
-            <li class = "item-container flex space-around">
+            <li class="item-container flex space-around">
                 <img src="img/scotland.png" alt="">
                 <div class="item-info flex flex-dir-col space-between">
                     <h2 class="item-title">Duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="item-data">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
                         sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                    <div class="continue-reading-btn flex justify-content-center align-items-center"
-                    onmouseover="continueReadHovered(this)" onmouseout="continueReadHoveredOff(this)">
-                    continue reading</div>
+                    <div class="continue-reading-btn flex justify-content-center align-items-center" onmouseover="continueReadHovered(this)"
+                        onmouseout="continueReadHoveredOff(this)">
+                        continue reading</div>
                 </div>
             </li>
-            <li class = "item-container flex space-around">
+            <li class="item-container flex space-around">
                 <img src="img/ireland.png" alt="">
                 <div class="item-info flex flex-dir-col space-between">
                     <h2 class="item-title">Duis aute irure dolor in henderit in voluptate.</h2>
                     <p class="item-data">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat,
                         sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                    <div class="continue-reading-btn flex justify-content-center align-items-center"
-                    onmouseover="continueReadHovered(this)" onmouseout="continueReadHoveredOff(this)">
-                    continue reading</div>
+                    <div class="continue-reading-btn flex justify-content-center align-items-center" onmouseover="continueReadHovered(this)"
+                        onmouseout="continueReadHoveredOff(this)">
+                        continue reading</div>
                 </div>
             </li>
         </ul>
@@ -74,20 +87,32 @@
     </main>
     <footer class="flex space-around align-items-center">
         <div class="footer-container flex flex-dir-col space-around align-items-center">
-                <div class="logo down-logo">Blogin<span class="logo-dot">.</span></div>
-                <div class="copy-rights-container flex space-around align-items-center">
-                    <p class="copy-rights">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at 
-                        <span class="pixelhint">Pixelhint.com</span></p>
-                </div>
-                <ul class="contact-us-container clean-list flex space-around align-items-center">
-                    <li class="contact-us facebook flex space-around align-items-center"><i class="fab fa-facebook-f"></i></li>
-                    <li class="contact-us twiter flex space-around align-items-center"><i class="fab fa-twitter"></i></li>
-                    <li class="contact-us behance flex space-around align-items-center"><i class="fab fa-behance"></i></li>
-                    <li class="contact-us dribble flex space-around align-items-center"><i class="fab fa-dribbble"></i></li>
-                </ul>
+            <div class="logo down-logo">Blogin
+                <span class="logo-dot">.</span>
+            </div>
+            <div class="copy-rights-container flex space-around align-items-center">
+                <p class="copy-rights">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at
+                    <span class="pixelhint">Pixelhint.com</span>
+                </p>
+            </div>
+            <ul class="contact-us-container clean-list flex space-around align-items-center">
+                <li class="contact-us facebook flex space-around align-items-center">
+                    <i class="fab fa-facebook-f"></i>
+                </li>
+                <li class="contact-us twiter flex space-around align-items-center">
+                    <i class="fab fa-twitter"></i>
+                </li>
+                <li class="contact-us behance flex space-around align-items-center">
+                    <i class="fab fa-behance"></i>
+                </li>
+                <li class="contact-us dribble flex space-around align-items-center">
+                    <i class="fab fa-dribbble"></i>
+                </li>
+            </ul>
         </div>
 
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 
