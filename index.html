@@ -32,7 +32,15 @@
             </h1>
             <nav>
                 <ul class="nav-list clean-list flex space-between">
-                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Journal</li>
+                    <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)" onmouseover="showDropDown()"
+                        onmouseout="hideDropDown()">Journal
+                        <div class="journal-dropdown-content flex flex-dir-col justify-content-center align-items-center">
+                            <div class="journal-dropdown-item flex justify-content-center align-items-center" onmouseover="showDropDown()" onmouseout="hideDropDown()">October 2016</div>
+                            <div class="journal-dropdown-item flex justify-content-center align-items-center" onmouseover="showDropDown()" onmouseout="hideDropDown()">January 2017</div>
+                            <div class="journal-dropdown-item flex justify-content-center align-items-center" onmouseover="showDropDown()" onmouseout="hideDropDown()">April 2017</div>
+                            <div class="journal-dropdown-item flex justify-content-center align-items-center" onmouseover="showDropDown()" onmouseout="hideDropDown()">July 2017</div>
+                        </div>
+                    </li>
                     <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">About</li>
                     <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Work</li>
                     <li class="nav-item flex justify-content-center align-items-center" onclick="openNavItem(this)">Contact</li>
@@ -41,6 +49,7 @@
             <button class="burger" onclick="displayMenu(this,this.innerText)">☰</button>
         </div>
     </header>
+
     <main class="container">
 
         <ul class="items-list clean-list flex flex-wrap space-around">
@@ -63,7 +72,7 @@
                         sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                     <div class="continue-reading-btn flex justify-content-center align-items-center" onmouseover="continueReadHovered(this)"
-                        onmouseout="continueReadHoveredOff(this)">
+                        onmouseout="continueReadHoveredOff(this)" onclick="displayModal()">
                         continue reading</div>
                 </div>
             </li>
@@ -75,7 +84,7 @@
                         sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit
                         in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
                     <div class="continue-reading-btn flex justify-content-center align-items-center" onmouseover="continueReadHovered(this)"
-                        onmouseout="continueReadHoveredOff(this)">
+                        onmouseout="continueReadHoveredOff(this)" onclick="displayModal()">
                         continue reading</div>
                 </div>
             </li>
