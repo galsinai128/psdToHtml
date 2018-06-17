@@ -1,5 +1,6 @@
 'use strict'
 
+var gDropdownFlag = false;
 
 function openNavItem(elNavItem) {
     var elnavs = document.querySelectorAll('.nav-item');
@@ -105,5 +106,13 @@ function hideDropDown() {
 
 function toggleDropdownClick(){
     var elDropDown = document.querySelector('.small-dropdown');
-    elDropDown.style.display = 'flex';
+    if (!gDropdownFlag){
+        elDropDown.style.display = 'flex';
+        gDropdownFlag = !gDropdownFlag;
+    }
+    else{
+        elDropDown.style.display = 'none';
+        gDropdownFlag = !gDropdownFlag;
+    }
+    
 }
