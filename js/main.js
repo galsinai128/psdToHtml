@@ -20,9 +20,8 @@ function continueReadHoveredOff(elItem) {
 
 function displayMenu(elMenu, menuTxt) {
     if (menuTxt === '☰') {
-        elMenu.innerText = '🗴';
-        elMenu.style.background = 'black';
-        elMenu.style.color = 'white';
+        elMenu.innerText = 'x';
+
 
         var elNavItemsList = document.querySelector('.nav-list');
         elNavItemsList.classList.add('display-nav-list');
@@ -42,10 +41,9 @@ function displayMenu(elMenu, menuTxt) {
         elItemWithDropDown.onmouseover = '';
         elItemWithDropDown.onmouseout='';
     }
-    if (menuTxt === '🗴') {
+    if (menuTxt === 'x') {
         elMenu.innerText = '☰';
-        elMenu.style.background = 'white';
-        elMenu.style.color = 'black';
+
 
         var elNavItemsList = document.querySelector('.nav-list');
         elNavItemsList.classList.remove('display-nav-list');
@@ -72,19 +70,18 @@ function displayMenu(elMenu, menuTxt) {
 
 function displayModal() {
     var elModalback = document.querySelector('.modal-background');
-    elModalback.style.display = 'block';
+    elModalback.classList.add('modal-background-open');
 
     var elModal = document.querySelector('.modal');
-    elModal.style.display = 'flex';
-
+    elModal.classList.add('modal-open');
 }
 
 function closeModal() {
     var elModalback = document.querySelector('.modal-background');
-    elModalback.style.display = 'none';
+    elModalback.classList.remove('modal-background-open');
 
     var elModal = document.querySelector('.modal');
-    elModal.style.display = 'none';
+    elModal.classList.remove('modal-open');
 
 }
 
